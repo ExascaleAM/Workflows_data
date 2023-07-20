@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Scipt to rebuild challenge problem mesh if necessary
+
+blockMesh
+
+snappyHexMesh -dict system/snappyHexMeshDict.1 -overwrite
+topoSet
+createPatch -dict system/createPatchDict -overwrite
+
+extrudeMesh
+transformPoints -translate "(0 0 -2.54)"
+
+rm -f constant/polyMesh/pointLevel > /dev/null 2>&1
+rm -f constant/polyMesh/cellLevel  > /dev/null 2>&1
+
+snappyHexMesh -dict system/snappyHexMeshDict.2 -overwrite
+
+renumberMesh -noFields -overwrite
+
+transformPoints -translate "(2.5 2.5 0)"
+transformPoints -scale "(0.001 0.001 0.001)"

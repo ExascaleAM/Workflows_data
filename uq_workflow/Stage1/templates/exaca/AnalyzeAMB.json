@@ -1,0 +1,19 @@
+{
+    "Regions": {
+        "XY1mm": {
+            "units": "Meters",
+            "zBounds": [0.001,0.001],
+            "printStats": ["GrainTypeFractions"],
+            "printPerGrainStats": ["Size","IPFZ-RGB"],
+            "printPoleFigureData": true,
+            "printInversePoleFigureData": true
+        },
+        "XZ500microns": {
+            "units": "Meters",
+            "yBounds": [0.00255,0.00255],
+            "printStats": ["GrainTypeFractions"],
+            "printPoleFigureData": false,
+            "printInversePoleFigureData": true
+        }
+    }
+}

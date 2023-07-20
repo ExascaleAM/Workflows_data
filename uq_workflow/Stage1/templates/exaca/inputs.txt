@@ -1,0 +1,24 @@
+ExaCA input file template
+***** 
+Problem type: RM
+Decomposition strategy: 1
+Material: PATH
+Cell size: 1.25
+Heterogeneous nucleation density: 2117.5
+Mean nucleation undercooling: 30.0
+Standard deviation of nucleation undercooling: 0
+Path to output: PATH
+Output file base name: PATH
+File of grain orientations: PATH
+Time step: 0.0625
+Substrate grain spacing: 12.3
+Path to and name of temperature field assembly instructions: temperature.txt
+Random seed for grains and nuclei generation: 1
+Print vtk data as binary: Y
+***Output data printing options: (Y or N) which data should be printed***
+Print file of grain misorientation values: Y
+Print file of all ExaCA data: Y
+Print default RVE output: Y
+Default RVE size, in CA cells: 400
+Debug check (reduced): N
+Debug check (extensive): N
